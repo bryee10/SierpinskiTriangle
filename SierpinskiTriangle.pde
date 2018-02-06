@@ -1,25 +1,22 @@
 public void setup()
 {
-	size(400,400);
+	size(800,800);
 }
 public void draw()
 {
-	int z = 22;
 	background(0, 0, 255);
-	sierpinski(200,200,plus(z));
+	//sierpinski(50,50,300);
 }
-public int plus(int x)
-{
-	return x + 10;
-}
-public void mouseDragged()//optional
-{
 
+public void mouseMoved()//optional
+{
+   sierpinski(50,50,mouseX);
 }
 public void sierpinski(int x, int y, int len) 
 {
 	if(len <= 20)
 	{
+    fill(random(256),random(256),random(256));
 		triangle(x, y, x+len/2, y+len, (x+len), y);
 	}
 	else
