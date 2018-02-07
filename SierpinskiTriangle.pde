@@ -1,6 +1,8 @@
 public void setup()
 {
 	size(800,800);
+  noFill();
+  stroke(255,255,255);
 }
 public void draw()
 {
@@ -10,17 +12,18 @@ public void draw()
 
 public void mouseMoved()//optional
 {
-	background(random(256),random(256),random(256));
-   sierpinski(50,0,mouseX);
-   sierpinski2(750,800,mouseY);
+	//background(random(256),random(256),random(256));
+  background(0);
+   sierpinski(0,0,mouseX);
+   sierpinski2(800,800,mouseY);
    sierpinski3(800,800,mouseX);
-   sierpinski4(0,0,mouseX);
+   sierpinski4(0,0,mouseY);
 }
 public void sierpinski(int x, int y, int len) 
 {
 	if(len <= 20)
 	{
-    fill(random(256),random(256),random(256));
+    //fill(random(256),random(256),random(256));
 		triangle(x, y, x+len/2, y+len, (x+len), y);
 	}
 	else
@@ -35,7 +38,7 @@ public void sierpinski2(int x, int y, int len)
 {
 	if(len <= 20)
 	{
-    fill(random(256),random(256),random(256));
+    //fill(random(256),random(256),random(256));
 		triangle(x, y, x-len/2, y-len, (x-len), y);
 	}
 	else
@@ -50,7 +53,7 @@ public void sierpinski3(int x, int y, int len)
 {
 	if(len <= 20)
 	{
-    fill(random(256),random(256),random(256));
+    //fill(random(256),random(256),random(256));
 		triangle(y, x, y-len, x-len/2, y, x-len);
 	}
 	else
@@ -65,7 +68,7 @@ public void sierpinski4(int x, int y, int len)
 {
 	if(len <= 20)
 	{
-    fill(random(256),random(256),random(256));
+    //fill(random(256),random(256),random(256));
 		triangle(y, x, y+len, x+len/2, y, x+len);
 	}
 	else
